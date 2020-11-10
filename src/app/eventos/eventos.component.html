@@ -1,0 +1,35 @@
+
+<header>
+<div class="row">
+  <div class="col">
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-secondary" (click)="changeCategory('crear')">crear</button>
+      <button type="button" class="btn btn-secondary" (click)="changeCategory('Small Images')">modificar</button>
+      <button type="button" class="btn btn-secondary" (click)="changeCategory('Middle Images')">borrar</button>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="category === 'crear'" class="row" style="margin-top: 1em;">
+
+  <form action="ejemplo.php" method="get">
+    <p>Nombre evento: <input type="text" name="nombre" size="40"></p>
+    <p>descripción: <input type="text" name="descripción" size="100"></p>
+    <p>Aceptas las condiciones:
+      <input type="checkbox" name="a" value="accept"> accept
+    </p>
+    <br>
+    <p>
+      <input type="button" value="Enviar" >
+    </p>
+  </form>
+
+
+
+
+</div>
+
+
+</header>
+
